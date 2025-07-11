@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MySuite">
+  <test name="MyTestNGDemo">
+    
+    <groups>
+      <run>
+        <include name="GroupA" />
+        <!-- group A ve B ye dahil olduğunda exlude üstün gelip b ye dahil olanı çalıştırmaz  -->
+        <exclude name="GroupB" />
+      </run>
+    </groups>
+    
+    <classes>
+      <class name="TestNgDemo.TestNGDemo" />
+      <!-- <methods> -->
+      <!-- Sadece Tek Testi Çalıştırma -->
+      <!-- <include name="Test1" />  -->
+      <!-- Testi Çıkarma -->
+      <!-- <exclude name="Test2" />  -->
+      <!-- </methods> -->
+    </classes>
+  </test>
+</suite>
